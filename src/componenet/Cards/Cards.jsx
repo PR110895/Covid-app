@@ -22,7 +22,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <CardComponent
           className={styles.recovered}
           cardTitle="Recovered"
-          value={recovered.value}
+          value={confirmed.value - deaths.value}
           lastUpdate={lastUpdate}
           cardSubtitle="Number of recoveries from COVID-19."
         />
